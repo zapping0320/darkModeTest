@@ -10,7 +10,6 @@ import UIKit
 
 class ColorHelper {
     
-    
     static func getMainThemeColor() -> UIColor {
         if #available(iOS 13, *) {
             return UIColor { (UITraitCollection: UITraitCollection) -> UIColor in
@@ -26,7 +25,23 @@ class ColorHelper {
             // Return fallback color for iOS 12 and lower
             return .orange
         }
-        
+    }
+    
+    static func getTextColor() -> UIColor {
+        if #available(iOS 13, *) {
+            return UIColor { (UITraitCollection: UITraitCollection) -> UIColor in
+                if UITraitCollection.userInterfaceStyle == .dark {
+                    // Return color for Dark Mode
+                    return .white
+                } else {
+                    // Return color for Light Mode
+                    return .black
+                }
+            }
+        } else {
+            // Return fallback color for iOS 12 and lower
+            return .white
+        }
     }
     
 }

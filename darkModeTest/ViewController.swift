@@ -27,22 +27,30 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-//        if #available(iOS 13, *) {
-//            if self == .dark {
-//                self.currentMode.text = "다크 모드입니다."
-//            } else {
-//                // Return color for Light Mode
-//                self.currentMode.text = "라이트 모드입니다."
-//            }
-//            
-//        } else {
-//            // Return fallback color for iOS 12 and lower
-//            self.currentMode.text = "ios 13 미만 버전이라 다크 모드를 지원하지 않습니다."
-//        }
+       
+        self.applyCurrentMode()
         
         self.mainThemeView.backgroundColor = ColorHelper.getMainThemeColor()
     }
 
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        self.applyCurrentMode()
+    }
+    
+    func applyCurrentMode() {
+        if #available(iOS 13, *) {
+            if self.view.traitCollection.userInterfaceStyle == .dark {
+                self.currentMode.text = "다크 모드입니다."
+                
+            } else {
+                // Return color for Light Mode
+                self.currentMode.text = "라이트 모드입니다."
+            }
+
+        } else {
+            // Return fallback color for iOS 12 and lower
+            self.currentMode.text = "ios 13 미만 버전이라 다크 모드를 지원하지 않습니다."
+        }
+    }
 }
 
