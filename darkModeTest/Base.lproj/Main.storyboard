@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ddx-f1-38J">
-                                <rect key="frame" x="95" y="165" width="240" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ddx-f1-38J">
+                                <rect key="frame" x="95" y="165" width="224" height="100"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="FKk-vo-CUd"/>
@@ -36,8 +36,8 @@
                                     <constraint firstAttribute="height" constant="100" id="smZ-M7-7Yv"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ez5-dS-9jx">
-                                <rect key="frame" x="186" y="791" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ez5-dS-9jx">
+                                <rect key="frame" x="15" y="812" width="384" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,6 +47,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RPT-vT-3Xi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9YC-df-dmE"/>
+                            <constraint firstAttribute="trailing" secondItem="ez5-dS-9jx" secondAttribute="trailing" constant="15" id="HkG-Ya-jNz"/>
+                            <constraint firstItem="ez5-dS-9jx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="biL-4Z-0b9"/>
                             <constraint firstItem="NBx-fB-HnJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cn8-Uh-L0x"/>
                             <constraint firstItem="RPT-vT-3Xi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="qdA-bg-Qp3"/>
                             <constraint firstItem="Ddx-f1-38J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s9f-2Q-TvN"/>
@@ -54,8 +56,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ez5-dS-9jx" secondAttribute="bottom" constant="50" id="vAh-Wq-qIm"/>
                             <constraint firstItem="NBx-fB-HnJ" firstAttribute="top" secondItem="Ddx-f1-38J" secondAttribute="bottom" constant="50" id="wEg-13-ToO"/>
                             <constraint firstItem="ez5-dS-9jx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wOo-Cl-z03"/>
+                            <constraint firstItem="Ddx-f1-38J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="yER-xC-a2X"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentMode" destination="RPT-vT-3Xi" id="WJL-kD-5YA"/>
+                        <outlet property="descriptionLabel" destination="ez5-dS-9jx" id="oDB-fv-EsV"/>
+                        <outlet property="imageView" destination="NBx-fB-HnJ" id="o43-Hz-fx5"/>
+                        <outlet property="mainThemeView" destination="Ddx-f1-38J" id="EpS-Jr-RcV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
