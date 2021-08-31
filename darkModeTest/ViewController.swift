@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBOutlet weak var subColorView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -31,6 +33,8 @@ class ViewController: UIViewController {
         self.applyCurrentMode()
         
         self.mainThemeView.backgroundColor = ColorHelper.getMainThemeColor()
+        
+        subColorView.backgroundColor = UIColor(named: "bgColor")
     }
 
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {

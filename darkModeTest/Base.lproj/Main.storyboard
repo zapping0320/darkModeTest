@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -42,21 +42,47 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="코드에 의한 색 적용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZs-7L-t21">
+                                <rect key="frame" x="95" y="134" width="131" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asset에 의한 색 적용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gr-1I-yNG">
+                                <rect key="frame" x="95" y="438" width="142.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufa-KX-xss">
+                                <rect key="frame" x="95" y="469" width="240" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="2La-lV-mdb"/>
+                                    <constraint firstAttribute="height" constant="50" id="oAF-8k-HSg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RPT-vT-3Xi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9YC-df-dmE"/>
                             <constraint firstAttribute="trailing" secondItem="ez5-dS-9jx" secondAttribute="trailing" constant="15" id="HkG-Ya-jNz"/>
+                            <constraint firstItem="Ddx-f1-38J" firstAttribute="top" secondItem="zZs-7L-t21" secondAttribute="bottom" constant="10" id="Jdm-g0-j2w"/>
+                            <constraint firstItem="9Gr-1I-yNG" firstAttribute="top" secondItem="Ddx-f1-38J" secondAttribute="bottom" constant="173" id="RXU-iE-qvY"/>
                             <constraint firstItem="ez5-dS-9jx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="biL-4Z-0b9"/>
                             <constraint firstItem="NBx-fB-HnJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cn8-Uh-L0x"/>
+                            <constraint firstItem="9Gr-1I-yNG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="gxr-5b-DH2"/>
+                            <constraint firstItem="ufa-KX-xss" firstAttribute="top" secondItem="9Gr-1I-yNG" secondAttribute="bottom" constant="10" id="lsy-2Q-Vyc"/>
                             <constraint firstItem="RPT-vT-3Xi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="qdA-bg-Qp3"/>
                             <constraint firstItem="Ddx-f1-38J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s9f-2Q-TvN"/>
                             <constraint firstItem="Ddx-f1-38J" firstAttribute="top" secondItem="RPT-vT-3Xi" secondAttribute="bottom" constant="50" id="uGe-QP-nwL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ez5-dS-9jx" secondAttribute="bottom" constant="50" id="vAh-Wq-qIm"/>
+                            <constraint firstItem="ufa-KX-xss" firstAttribute="leading" secondItem="9Gr-1I-yNG" secondAttribute="leading" id="vzL-SU-3wQ"/>
                             <constraint firstItem="NBx-fB-HnJ" firstAttribute="top" secondItem="Ddx-f1-38J" secondAttribute="bottom" constant="50" id="wEg-13-ToO"/>
                             <constraint firstItem="ez5-dS-9jx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wOo-Cl-z03"/>
                             <constraint firstItem="Ddx-f1-38J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="yER-xC-a2X"/>
+                            <constraint firstItem="zZs-7L-t21" firstAttribute="leading" secondItem="Ddx-f1-38J" secondAttribute="leading" id="zaF-QI-daQ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -64,6 +90,7 @@
                         <outlet property="descriptionLabel" destination="ez5-dS-9jx" id="oDB-fv-EsV"/>
                         <outlet property="imageView" destination="NBx-fB-HnJ" id="o43-Hz-fx5"/>
                         <outlet property="mainThemeView" destination="Ddx-f1-38J" id="EpS-Jr-RcV"/>
+                        <outlet property="subColorView" destination="ufa-KX-xss" id="k3h-qU-ggI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
