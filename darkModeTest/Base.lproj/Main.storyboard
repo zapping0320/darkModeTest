@@ -56,23 +56,32 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufa-KX-xss">
                                 <rect key="frame" x="95" y="469" width="240" height="50"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="2La-lV-mdb"/>
                                     <constraint firstAttribute="height" constant="50" id="oAF-8k-HSg"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Chq-Kn-giL">
+                                <rect key="frame" x="147" y="589" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="4ji-IO-TNe"/>
+                                    <constraint firstAttribute="width" constant="120" id="vvv-j3-AYa"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RPT-vT-3Xi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9YC-df-dmE"/>
+                            <constraint firstItem="Chq-Kn-giL" firstAttribute="top" secondItem="ufa-KX-xss" secondAttribute="bottom" constant="70" id="GOs-l4-JkV"/>
                             <constraint firstAttribute="trailing" secondItem="ez5-dS-9jx" secondAttribute="trailing" constant="15" id="HkG-Ya-jNz"/>
                             <constraint firstItem="Ddx-f1-38J" firstAttribute="top" secondItem="zZs-7L-t21" secondAttribute="bottom" constant="10" id="Jdm-g0-j2w"/>
                             <constraint firstItem="9Gr-1I-yNG" firstAttribute="top" secondItem="Ddx-f1-38J" secondAttribute="bottom" constant="173" id="RXU-iE-qvY"/>
                             <constraint firstItem="ez5-dS-9jx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="biL-4Z-0b9"/>
                             <constraint firstItem="NBx-fB-HnJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cn8-Uh-L0x"/>
                             <constraint firstItem="9Gr-1I-yNG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="gxr-5b-DH2"/>
+                            <constraint firstItem="Chq-Kn-giL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kCI-BZ-bzJ"/>
                             <constraint firstItem="ufa-KX-xss" firstAttribute="top" secondItem="9Gr-1I-yNG" secondAttribute="bottom" constant="10" id="lsy-2Q-Vyc"/>
                             <constraint firstItem="RPT-vT-3Xi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="qdA-bg-Qp3"/>
                             <constraint firstItem="Ddx-f1-38J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s9f-2Q-TvN"/>
@@ -91,6 +100,7 @@
                         <outlet property="imageView" destination="NBx-fB-HnJ" id="o43-Hz-fx5"/>
                         <outlet property="mainThemeView" destination="Ddx-f1-38J" id="EpS-Jr-RcV"/>
                         <outlet property="subColorView" destination="ufa-KX-xss" id="k3h-qU-ggI"/>
+                        <outlet property="tintImageView" destination="Chq-Kn-giL" id="Brh-E3-kK6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -105,6 +115,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

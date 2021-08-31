@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var subColorView: UIView!
     
+    @IBOutlet weak var tintImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,6 +37,14 @@ class ViewController: UIViewController {
         self.mainThemeView.backgroundColor = ColorHelper.getMainThemeColor()
         
         subColorView.backgroundColor = UIColor(named: "bgColor")
+        
+        tintImageView.image = UIImage(named: "tycon")?.withRenderingMode(.alwaysTemplate)
+        if UITraitCollection.current.userInterfaceStyle == .dark {
+            tintImageView.tintColor = .red
+        }
+        else {
+            tintImageView.tintColor = .blue
+        }
     }
 
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
